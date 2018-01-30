@@ -17,6 +17,12 @@
 <body>
   <div class="container">
 
+      <div align="right">
+          <form method="GET" action="/login/">
+              <input type="submit" value="Login">
+          </form>
+      </div>
+
     <div>
       <h3 class="text-muted">Magen Local Agent (Demo version 0.1)</h3>
     </div>
@@ -35,7 +41,8 @@
     {{ form.email.label }} {{ form.email(size=20) }}
     {{ form.password.label }} {{ form.password(size=20) }}
     {{ form.confirm.label }} {{ form.confirm(size=20) }}
-    <input type="submit" value="Go">
+    <input type="submit" value="Register">
+    <input type="reset" value="Cancel">
     {% with messages = get_flashed_messages() %}
         {% if messages %}
             <ul class=flashes>
@@ -43,6 +50,8 @@
                     <li>{{ message }}</li>
                 {% endfor %}
             </ul>
+        {% else %}
+            <br><br> Already have an account? <a href="/login/"> <b>Login</b> </a>
         {% endif %}
     {% endwith %}
 </form>
