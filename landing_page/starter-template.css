@@ -157,6 +157,11 @@ font-family:cabin;
 	border-left: 2px solid rgba(255, 255, 255, 0.3);
     padding-left: 20px;
 }
+.section_divider{
+  border-color: #EBECF0;
+  padding-bottom: 70px;
+  border-bottom-style: solid;
+}
 .list-group-item{
 	padding:0px !important;
 	background-color: #456FB2;
@@ -287,6 +292,22 @@ font-family:cabin;
 .margintemplate{
 	margin-left: 60px;
 	margin-right: 15px;
+}
+
+.registercontent{
+    background: #fff;
+    clear: both;
+    margin: 36px auto 48px;
+    position: relative;
+    width: 960px;
+}
+.titlecontent{
+  text-align: center;
+    padding: 0 3em 12px;
+}
+.magenlogo{
+  width: 250px;
+    padding: 30px 0;
 }
 
 @media (max-width:767px) {
