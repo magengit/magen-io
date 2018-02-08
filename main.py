@@ -27,7 +27,8 @@ import magen_user_api.user_api as user_api
 from magen_user_api.user_api import users_bp, main_bp
 
 from ingestion.ingestion_server.ingestion_file_upload_rest_api import ingestion_file_upload_bp
-from magen_utils_apis.domain_resolver import mongo_host_port, inside_docker
+from ingestion.ingestion_server.asset_rest_api import ingestion_bp
+from magen_utils_apis.domain_resolver import mongo_host_port, inside_docker, LOCAL_MONGO_LOCATOR
 
 app = Flask(__name__)
 
@@ -148,6 +149,7 @@ def main(args):
     app.register_blueprint(users_bp)
     app.register_blueprint(ingestion_file_upload_bp, url_prefix='/magen/ingestion/v2')
     app.register_blueprint(ingestion_bp_v2, url_prefix='/magen/ingestion/v2')
+    app.register_blueprint(ingestion_bp, url_prefix='/magen/ingestion/v2')
     app.run('0.0.0.0', 5005, threaded=True)
 
 
