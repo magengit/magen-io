@@ -1,9 +1,9 @@
-Flask>=0.12
-Flask-Login>=0.2
+Flask>=0.12.2
+Flask-Login>=0.4.1
 Flask-WTF>=0.14
 Flask-UrlDiscovery>=1.1
 magen-ingestion-service>=1.3a
-magen-user>=0.0a
+magen-user>=0.0a5
 magen-utils>=1.2a
 magen-mongo>=1.1a
 pip>=9.0.1
