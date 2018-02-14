@@ -1,5 +1,4 @@
 body {
-	padding-top: 87px;
   position:relative;
 }
 .starter-template {
@@ -47,6 +46,21 @@ h6{
 	font-weight:400;
 	margin-bottom:50px;
 	
+}
+.registertitle{
+  color:#456FB2;
+  text-align:center;
+   font-family:cabin;
+  font-weight:700;
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+.registerinfo{
+  color:#999;
+  font-family:cabin;
+  font-weight:400;
+  margin-top:50px;
+  margin-bottom: 20px;
 }
 .textleft{
 	text-align: left;
@@ -217,7 +231,7 @@ font-family:cabin;
   color: white;
   display: block;
   text-decoration: none;
-=
+
 }
 
 .sidebar-nav li a span:before {
@@ -299,16 +313,110 @@ font-family:cabin;
     clear: both;
     margin: 36px auto 48px;
     position: relative;
-    width: 960px;
+  
 }
 .titlecontent{
   text-align: center;
     padding: 0 3em 12px;
 }
 .magenlogo{
-  width: 250px;
-    padding: 30px 0;
+    width:250px;
+    font-family: cabin;
+    font-weight: 700;
+    font-size: 30px;
 }
+.sideborder{
+  float:right;
+  border-right: 1px solid #ccc;
+  padding-right: 69px;
+  }
+.logincenter{
+    height: 100vh;
+    min-height: 500px;
+    margin: 0 auto;
+    width: 400px;
+}
+.haveaccount{
+    font-size:16px;
+    color: #999;
+    font-family: cabin;
+    font-weight: 500;
+    margin-top: 5px;
+}
+.loginbox{
+    background: #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #172B4D;
+    padding: 35px 35px 35px;
+
+  }
+  .loginboxtitle{
+    font-size:24px;
+    color: #456FB2;
+    font-family: cabin;
+    font-weight: 700;
+    margin-bottom: 45px;
+  }
+
+label[for=email] { 
+    color: #999;
+    font-family: cabin;
+    font-weight: 500;
+}
+
+
+  label[for=password] { 
+    color: #999;
+    font-family: cabin;
+    font-weight: 500;
+
+}
+    label[for=confirm] { 
+    color: #999;
+    font-family: cabin;
+    font-weight: 500;
+}
+  input[id=email] {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+  input[id=password] {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+input[id=confirm] {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #456FB2;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.label{
+    font-family: cabin !important;
+    color: #7a7a7a !important;
+}
+.registerbutton{
+    margin-top: 30px;
+}
+
 
 @media (max-width:767px) {
 

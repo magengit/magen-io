@@ -24,7 +24,6 @@ from magen_mongo_apis.mongo_core_database import MongoCore
 from magen_mongo_apis.mongo_utils import MongoUtils
 
 import magen_user_api.user_api as user_api
-from magen_rest_apis.server_urls import ServerUrls
 from magen_user_api.user_api import users_bp, main_bp
 
 from ingestion.ingestion_server.ingestion_file_upload_rest_api import ingestion_file_upload_bp
@@ -69,8 +68,6 @@ def ingestion_before_request():
 
 
 def main(args):
-
-    server_urls_instance = ServerUrls.get_instance()
     #: setup parser -----------------------------------------------------------
     parser = argparse.ArgumentParser(description='Magen IO Server',
                                      usage=("\npython3 server.py "
