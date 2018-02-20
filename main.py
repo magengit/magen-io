@@ -67,6 +67,9 @@ def ingestion_before_request():
     pass
 
 
+recaptcha = user_api.config.init_recaptcha_with_creds(app)
+
+
 def main(args):
     #: setup parser -----------------------------------------------------------
     parser = argparse.ArgumentParser(description='Magen IO Server',
