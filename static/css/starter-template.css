@@ -325,6 +325,13 @@ font-family:cabin;
     font-weight: 700;
     font-size: 30px;
 }
+.magenlogo1{
+   width:250px;
+    font-family: cabin;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 25px 8px 6px 44px;
+}
 .sideborder{
   float:right;
   border-right: 1px solid #ccc;
@@ -416,6 +423,74 @@ input[type=button], input[type=submit], input[type=reset] {
 .registerbutton{
     margin-top: 30px;
 }
+.main{
+  margin-left: 220px;
+}
+
+.manageicon{
+    width: 65px;
+    height: 20px;
+    position: relative;
+    padding-bottom: 4px;
+}
+ul :hover .manageicon path {
+    fill: #3080FF;
+    text-decoration: none;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  float: left;
+  width: 17%;
+  height:100%;
+   position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+nav a {
+    background: #fff;
+    color: #000;
+    position: relative;
+    padding: 25px 8px 6px 44px;
+
+    font-size: 16px;
+    color: #999;
+    display: block;
+    font-family: cabin;
+    font-weight: 500;
+}
+
+
+
+nav a:hover:after {
+  content: "";
+  display: block;
+  border:  18px dashed #3080FF;
+  border-left-color: red;
+  border-radius:10px;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  margin-left: -30px;
+  width:1px;
+  text-decoration:none;
+}
+
+a svg {
+  display: inline-block;
+   vertical-align: middle;
+}
+
+
 
 
 @media (max-width:767px) {

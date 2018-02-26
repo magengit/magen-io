@@ -48,20 +48,21 @@
     <div class="registerbutton">
     <input type="submit" value="Register">
     </div>
- 
+   <div class="haveaccount">
     {% with messages = get_flashed_messages() %}
         {% if messages %}
-            <ul class=flashes>
+            <p class=flashes>
                 {% for message in messages %}
-                    <li>{{ message }}</li>
+                   {{ message }}
                 {% endfor %}
-            </ul>
+            </p>
         {% else %}
-            <div class="haveaccount">
+  
             <br><br> Already have an account? <a href="/login/"> <b>Login</b> </a>
-          </div>
+         
         {% endif %}
     {% endwith %}
+      </div>
 </form>
     </div>
   </div>

@@ -310,6 +310,62 @@ font-family:cabin;
     padding: 30px 0;
 }
 
+.manageicon{
+    width:47px;
+    height:18px;
+    position: inherit;
+}
+ul :hover .manageicon path {
+    fill: #50c8e8;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav {
+  float: left;
+  width: 20%;
+  height:100%;
+   position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+nav a {
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  position: relative;
+     padding: 25px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+  text-align:center;
+}
+
+
+
+nav a:hover:after {
+  content: "";
+  display: block;
+  border:  18px dashed #bbb;
+  border-left-color: red;
+  border-radius:10px;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  margin-left: -30px;
+  width:1px;
+}
+
+
 @media (max-width:767px) {
 
 #wrapper {
