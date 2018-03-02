@@ -37,7 +37,7 @@
     <br>{{ form.password.label }} {{ form.password(size=20) }}<br>
           <div class="recaptcha-container">{{ recaptcha }}</div>
     <div class="registerbutton">
-    <input type="submit" value="Login">
+    <input class="loginbutton" type="submit" value="Login">
   </div>
       <div class="registerinfo">
     {% with messages = get_flashed_messages() %}

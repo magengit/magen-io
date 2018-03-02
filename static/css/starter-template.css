@@ -22,30 +22,30 @@ body {
 }
 }
 h1{
-	font-family:cabin;
-	font-weight:700;
-	margin-bottom:30px;
+  font-family:cabin;
+  font-weight:700;
+  margin-bottom:30px;
 }
 h3{
-	font-family: cabin;
-	font-weight:700;
+  font-family: cabin;
+  font-weight:700;
 }
 
 h4{
-	font-family:cabin;
-	font-weight:700;
-	margin-bottom: 20px;
+  font-family:cabin;
+  font-weight:700;
+  margin-bottom: 20px;
 }
 h6{
-	font-family:cabin;
-	font-weight:700;
+  font-family:cabin;
+  font-weight:700;
 }
 
 .magentext{
-	font-family:cabin;
-	font-weight:400;
-	margin-bottom:50px;
-	
+  font-family:cabin;
+  font-weight:400;
+  margin-bottom:50px;
+  
 }
 .registertitle{
   color:#456FB2;
@@ -63,20 +63,20 @@ h6{
   margin-bottom: 20px;
 }
 .textleft{
-	text-align: left;
+  text-align: left;
 }
 .textcenter{
-	text-align:center;
+  text-align:center;
 }
 .navbar{
-	padding: .5rem 5rem;
+  padding: .5rem 5rem;
 }
  .navbar-brand {
   display: flex;
   align-items: center;
   font-family:cabin;
-	font-weight:700;
-	font-size:30px;
+  font-weight:700;
+  font-size:30px;
 }
 
  .navbar-brand>img {
@@ -84,67 +84,67 @@ h6{
 }
 
 .navbar-nav > li{
-	padding-top:12px;
+  padding-top:12px;
   padding-left:20px;
   padding-right:20px;
 }
 .nav-link{
 font-family:cabin;
-	font-weight: 500;
+  font-weight: 500;
 
 }
 
 .navbar-inverse .navbar-toggler{
-	margin-top:10px;
-	background-color: #456FB2;
+  margin-top:10px;
+  background-color: #456FB2;
 }
 
 .bg-inverse{
-	background-color:white !important;
+  background-color:white !important;
 }
 
 
 .btn{
-	background-color:#456FB2;
-	
+  background-color:#456FB2;
+  
 }
 .navbar-inverse .navbar-nav .nav-link{
-	color:#456FB2;
+  color:#456FB2;
 }
 
 
 
 .navbar-inverse .navbar-nav .nav-link:focus, .navbar-inverse .navbar-nav .nav-link:hover{
-	color:black;
+  color:black;
 }
 
 .sectionbg{
-	background-color:#FFCA5E;
+  background-color:#FFCA5E;
 }
 
 
 .sectionvisible{
-	overflow:visible;
+  overflow:visible;
 }
 
 .footerbg{
-	background-color:#456FB2;
-	overflow:hidden;
-	padding-bottom: 36px;
+  background-color:#456FB2;
+  overflow:hidden;
+  padding-bottom: 36px;
 }
 
 .text-muted{
-	color: white !important;
-	margin-bottom: 10px !important;
-	display: inline-block;
-	float:none;
-	text-align: left;
+  color: white !important;
+  margin-bottom: 10px !important;
+  display: inline-block;
+  float:none;
+  text-align: left;
 
-	
+  
 }
 
 .row-full{
-	overflow: hidden;
+  overflow: hidden;
   position: relative;
   margin-left: -50vw;
   z-index: -1;
@@ -154,21 +154,21 @@ font-family:cabin;
   
 }
 .text-margin{
-	padding: 36px;
+  padding: 36px;
 }
 .toprow{
-	position: relative;
-	top:-120px;
+  position: relative;
+  top:-120px;
 }
 .margin-top{
-	margin-top: 115px;
+  margin-top: 115px;
 }
 
 .text-margin1{
-	padding: 10px;
+  padding: 10px;
 }
 .footerborder{
-	border-left: 2px solid rgba(255, 255, 255, 0.3);
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
     padding-left: 20px;
 }
 .section_divider{
@@ -177,9 +177,9 @@ font-family:cabin;
   border-bottom-style: solid;
 }
 .list-group-item{
-	padding:0px !important;
-	background-color: #456FB2;
-	border:none !important;
+  padding:0px !important;
+  background-color: #456FB2;
+  border:none !important;
 }
 
 #wrapper {
@@ -211,7 +211,10 @@ font-family:cabin;
   width: 100%;
 }
 
-
+.content-wrapper{
+  width: 100%;
+  padding-left:17%;
+}
 
 .sidebar-nav {
   position: absolute;
@@ -297,15 +300,15 @@ font-family:cabin;
 }
 
 .btn1{
-	display: inline-block;
+  display: inline-block;
     font-weight: 400;
     line-height: 1.25;
     border: none;
 }
 
 .margintemplate{
-	margin-left: 60px;
-	margin-right: 15px;
+  margin-left: 60px;
+  margin-right: 15px;
 }
 
 .registercontent{
@@ -367,6 +370,44 @@ font-family:cabin;
     font-weight: 700;
     margin-bottom: 45px;
   }
+  
+  .sharetitle{
+
+    font-size:24px;
+    color: black;
+    font-family: cabin;
+    font-weight: 500;
+    margin-top: 70px;
+    padding-bottom:20px;
+    border-bottom:1px solid #ccc;
+   
+
+  }
+  .shareinfo{
+    font-size:16px;
+    font-family:cabin;
+    font-weight:400;
+    margin-top:30px;
+    margin-bottom: 50px;
+  }
+
+  .shareform{
+    font-size:16px;
+    font-family: cabin;
+    font-weight:500;
+    color:#999;
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .shareaccess{
+    font-size:16px;
+    font-family: cabin;
+    font-weight:500;
+    color:#999;
+    display: inline-block;
+    margin-top:30px;
+  }
+
 
 label[for=email] { 
     color: #999;
@@ -407,15 +448,25 @@ input[id=confirm] {
     border-bottom: 2px solid #ccc;
     outline: none;
 }
-input[type=button], input[type=submit], input[type=reset] {
+
+input.loginbutton{
     background-color: #456FB2;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+input.shareinput{
+  border-radius:25px;
+  border: none;
+  padding-left:12px;
+  outline:none;
+  margin-right: 20px;
+    box-shadow:0 2px 2px rgba(0, 0, 0, 0.1) !important;
 
 }
+
 .label{
     font-family: cabin !important;
     color: #7a7a7a !important;
@@ -433,10 +484,21 @@ input[type=button], input[type=submit], input[type=reset] {
     position: relative;
     padding-bottom: 4px;
 }
+
+.form-control{
+  box-shadow:0 2px 2px rgba(0, 0, 0, 0.1) !important;
+  width:38%;
+  border:none !important;
+    border: none !important;
+    margin-bottom: 30px !important;
+
+}
+
 ul :hover .manageicon path {
     fill: #3080FF;
     text-decoration: none;
 }
+
 nav ul {
   margin: 0;
   padding: 0;
@@ -471,7 +533,7 @@ nav a {
 
 
 
-nav a:hover:after {
+nav a:hover:after{
   content: "";
   display: block;
   border:  18px dashed #3080FF;
@@ -485,11 +547,29 @@ nav a:hover:after {
   text-decoration:none;
 }
 
+
 a svg {
   display: inline-block;
    vertical-align: middle;
 }
+#webwrapper{
+  margin-right: auto;
+  margin-left: auto;
+  width:1200px;
+}
 
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #3080FF;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #3080FF;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #3080FF;
+}
 
 
 
