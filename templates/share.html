@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-  <link rel="stylesheet" href= "starter-template.css" type="text/css" />
+  <link rel="stylesheet" href= "{{ url_for('static',filename='css/starter-template.css') }}"  type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   </head>
 
@@ -25,7 +25,7 @@
       <img class="magenlogo1 img-fluid" src="{{ url_for('static',filename='images/magentitle.png') }}" alt="magenlogo" border="0"></img>
     <ul>
 
-      <li><a href="#"><svg class="manageicon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 391.43 391.43"><title>Home</title><path fill="#999" d="M368.2,349.05l138.39-129L645,349.05M368.2,349V558h91.18V455.16h94.41V558H645V349Zm235.11-92.28V178h-30V228.8l-66.72-62.19L310.87,349h38.62l157.1-146.43L663.68,349h38.63Z" transform="translate(-310.87 -166.61)"/></svg>Home</a></li>
+      <li><a href="/"><svg class="manageicon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 391.43 391.43"><title>Home</title><path fill="#999" d="M368.2,349.05l138.39-129L645,349.05M368.2,349V558h91.18V455.16h94.41V558H645V349Zm235.11-92.28V178h-30V228.8l-66.72-62.19L310.87,349h38.62l157.1-146.43L663.68,349h38.63Z" transform="translate(-310.87 -166.61)"/></svg>Home</a></li>
 
       <li><a href="/magen/ingestion/v2/file_upload/"><svg class="manageicon" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.53 154"><title>Upload</title><path fill="#999" d="M447.05,337.63v.07H415.43L482.69,275,550,337.7H519.56v-.07Zm0,.07V429h72.51V337.7Z" transform="translate(-415.43 -275)"/></svg>Upload</a></li>
 
@@ -67,8 +67,8 @@
     
       <form method="POST">
           <div class="shareform">Asset ID: </div><input class="shareinput" type="text" name="asset_id" placeholder="Asset_id" size="30">
-          <div class="shareform">Users: </div><input class="shareinput" type="text" name="users" placeholder="Enter users separated by comma" size="30">
-          <br><div class="shareaccess">Share Access:</div>
+          <div class="shareform">Share with Users: </div><input class="shareinput" type="text" name="users" placeholder="Enter users separated by comma" size="30">
+          <br><div class="shareaccess">Revoke Access to Users:</div>
               <select name="selected_user" multiple class="form-control" id="select_user">
                   <option value="Bob">Bob</option>
                   <option value="John">John</option>
