@@ -567,7 +567,7 @@ a svg {
     color: #3080FF;
 }
 
-::-ms-input-placeholder { /* Microsoft Edge */
+:-ms-input-placeholder { /* Microsoft Edge */
     color: #3080FF;
 }
 
