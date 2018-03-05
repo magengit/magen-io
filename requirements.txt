@@ -6,4 +6,5 @@ magen-ingestion-service>=1.3a15
 magen-user>=0.1a0
 magen-utils>=1.2a3
 magen-mongo>=1.1a0
+magen-ks>=1.9a3
 pip>=9.0.1
