@@ -25,7 +25,7 @@
     <div class="logincenter">
     <div class="registercontent">
       <header class="titlecontent">
-        <img class="magenlogo img-fluid" src="{{ url_for('static',filename='images/magentitle.png') }}" alt="magenlogo" border="0"></img>
+        <img class="magenlogo img-fluid" src="{{ url_for('static',filename='images/magentitle.png') }}" alt="magenlogo"></img>
       </header>
     <div class="loginbox">
       <div class="loginboxtitle">
@@ -47,20 +47,20 @@
                   {{ message }}
                 {% endfor %}
             </p>
-        {% else %}
-    
-           Don't have an account? <a href="/register/">Register</a>
-         </div>
         {% endif %}
     {% endwith %}
+<<<<<<< HEAD
+=======
+          Don't have an account? <a href="/register/">Register</a>
   </div>
+>>>>>>> origin/master
 </form>
 
 </div><!---Loginbox-->
   </div><!--registercontent-->
 
 </div><!--logincenter-->
-</div>
+
 
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

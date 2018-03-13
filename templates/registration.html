@@ -25,7 +25,7 @@
     <div class="registercontent">
 
       <header class="titlecontent">
-        <img class="magenlogo img-fluid" src="{{ url_for('static',filename='images/magentitle.png') }}" alt="magenlogo" border="0"></img>
+        <img class="magenlogo img-fluid" src="{{ url_for('static',filename='images/magentitle.png') }}" alt="magenlogo"></img>
       </header>
 
   <div class="row justify-content-around ">
@@ -60,7 +60,7 @@
             </p>
         {% else %}
   
-            <br><br> Already have an account? <a href="/login/"> <b>Login</b> </a>
+            <br><br> Already have an account? <a href="/login/"> Login</a>
          
         {% endif %}
     {% endwith %}
