@@ -105,7 +105,9 @@ font-family:cabin;
 
 
 .btn{
-  background-color:#456FB2;
+    background-color: #456FB2;
+    font-family: cabin;
+    
   
 }
 .navbar-inverse .navbar-nav .nav-link{
@@ -120,6 +122,7 @@ font-family:cabin;
 
 .sectionbg{
   background-color:#FFCA5E;
+  margin-top:-1px;
 }
 
 
@@ -139,7 +142,9 @@ font-family:cabin;
   display: inline-block;
   float:none;
   text-align: left;
-
+}
+a.text-muted:focus,a.text-muted:hover {
+    color: #fff !important;
   
 }
 
@@ -150,8 +155,7 @@ font-family:cabin;
   z-index: -1;
   top:-200px;
   left: 50%;
-  width:100vw
-  
+  width:101vw;  
 }
 .text-margin{
   padding: 36px;
@@ -289,6 +293,8 @@ font-family:cabin;
 
 #menu-toggle {
     text-decoration: none;
+    background-color: #fff;
+    color: black;
 }
 
 .btn-menu {
@@ -350,7 +356,7 @@ font-family:cabin;
     font-size:16px;
     color: #999;
     font-family: cabin;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 5px;
 }
 .loginbox{
@@ -463,10 +469,171 @@ input.shareinput{
   padding-left:12px;
   outline:none;
   margin-right: 20px;
-    box-shadow:0 2px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow:0 2px 2px rgba(0, 0, 0, 0.1) !important;
 
 }
 
+input.logoutbutton{
+    padding: 6px 30px 6px 52px;
+    background-color: #3080FF;
+    color: white;
+    border-color: #3080FF;
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-top: 45px;
+    border-width: 2px;
+    outline: none;
+    font-family: cabin;
+    font-weight: 500;
+    font-size: 16px;
+}
+input.logoutbutton:hover{
+  background-color:#456FB2;
+  border-color: #456FB2;
+}
+
+input.deletebutton{
+    font-family: cabin;
+    display: inline-block;
+    padding: 8px 17px 8px 32px;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    margin-right: 16px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    border: none;
+    color: #fff;
+    background-color: rgb(225, 0, 80);
+    border-color: #d43f3a;
+    outline: none;
+}
+input.deletebutton:hover, input.deletebutton:active{
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925
+}
+.deleteicon{
+  position:relative;
+}
+
+.deleteicon:after{
+font-family: FontAwesome;
+    content: "\f014";
+    font-size: 16px;
+    position: absolute;
+    right: 80px;
+    top: -3px;
+    pointer-events: none;
+    color: white;
+  }
+input.deletebutton1{
+    font-family: cabin;
+    display: inline-block;
+    padding: 8px 17px 8px 32px;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    margin-right: 16px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    border: none;
+    color: #fff;
+    background-color: rgb(225, 0, 80);
+    border-color: #d43f3a;
+    outline: none;
+}
+input.deletebutton1:hover, input.deletebutton1:active{
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925
+}
+.deleteicon1{
+  position:relative;
+}
+
+.deleteicon1:after{
+font-family: FontAwesome;
+    content: "\f014";
+    font-size: 16px;
+    position: absolute;
+    right: 98px;
+    top: -3px;
+    pointer-events: none;
+    color: white;
+  }
+input.sharebutton{
+    font-family: cabin;
+    display: inline-block;
+    padding: 8px 17px 8px 32px;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border-radius: 4px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    margin-right: 16px;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    border: none;
+    color: #fff;
+    background-color: rgb(64, 84, 177);
+    border-color: #d43f3a;
+    outline: none;
+}
+input.sharebutton:hover, input.sharebutton:active{
+    color: #fff;
+    background-color: rgb(49, 65, 157);
+    border-color: rgb(49, 65, 157);
+}
+.shareicon{
+  position:relative;
+}
+.shareicon:after{
+font-family: FontAwesome;
+    content: "\f064";
+    font-size: 16px;
+    position: absolute;
+    right: 78px;
+    top: -1px;
+    pointer-events: none;
+    color: white;
+  }
+.logouticon{
+  position: relative;
+}
+.logouticon:after{
+    font-family: FontAwesome;
+    content: "\f08b";
+    font-size: 16px;
+    position: absolute;
+    right: 100px;
+    top: -3px;
+    pointer-events: none;
+    color: white;
+}
 .label{
     font-family: cabin !important;
     color: #7a7a7a !important;
@@ -493,21 +660,64 @@ input.shareinput{
     margin-bottom: 30px !important;
 
 }
+.btn-primary {
+    color: #fff;
+    background-color: #3080FF;
+}
+.sharepanel{
+    background: #FFFFFF;
+    border-radius: 3px;
+    box-shadow: 0 2px 9px rgba(0, 1, 1, 0.1);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    color: #172B4D;
+    padding: 35px 35px 35px;
+    margin-top: 50px;
+    margin-right: 13px;
+    font-family:cabin;
+    font-weight: 500;
+    font-size:14px;
+}
+.flashes1{
+    margin-top: 45px;
+    font-family: cabin;
+    font-size: 16px;
+    color: red;
+    font-weight: 700;
+  }
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 250px;
+    font-size: 16px;
+    color: #3080FF;
+    line-height: 50px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+    font-family: cabin;
+    font-weight: 700;
 
-ul :hover .manageicon path {
+}
+    
+
+img-fluid1{
+  max-width:100%;
+  width: auto;
+}
+.sidebarhover :hover .manageicon path {
     fill: #3080FF;
     text-decoration: none;
 }
 
-nav ul {
+.sidebar .sidebarhover {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-nav {
+.sidebar {
   float: left;
-  width: 17%;
   height:100%;
    position: fixed;
     z-index: 1;
@@ -516,9 +726,13 @@ nav {
     background-color: #fff;
     overflow-x: hidden;
     padding-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    min-width: 200px;
 }
 
-nav a {
+.sidebar .navlink {
     background: #fff;
     color: #000;
     position: relative;
@@ -533,7 +747,7 @@ nav a {
 
 
 
-nav a:hover:after{
+.sidebar .navlink:hover:after{
   content: "";
   display: block;
   border:  18px dashed #3080FF;
@@ -548,30 +762,46 @@ nav a:hover:after{
 }
 
 
-a svg {
-  display: inline-block;
+.navlink svg {
+    display: inline-block;
    vertical-align: middle;
 }
+.sidebar form{
+    display: block;
+    position: absolute;
+    padding: 0px 0px 0px 55px;
+}
+.card-header {
+    padding: 0.5rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #456FB2 !important;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    color: white !important;
+    font-family: cabin !important;
+    font-weight: 700 !important;
+
+}
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    font-family: cabin !important;
+    font-weight:400;
+
+}
+.dropdown-item:focus,.dropdown-item:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #0275d8
+}
+
+
 #webwrapper{
   margin-right: auto;
   margin-left: auto;
   width:1200px;
 }
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: #3080FF;
-    opacity: 1; /* Firefox */
-}
-
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #3080FF;
-}
-
-:-ms-input-placeholder { /* Microsoft Edge */
-    color: #3080FF;
-}
-
-
 
 @media (max-width:767px) {
 
@@ -603,6 +833,13 @@ a svg {
 .inset {
   padding: 15px;
 }
+.container {
+    max-width: 500px !important;
 
 }
 
+@media (min-width: 992px){}
+.container {
+    max-width: 750px !important;
+}
+}
