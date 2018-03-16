@@ -139,7 +139,7 @@ def main(args):
             opa_container.remove()
             raise NotFound("Container Exited or could not be started")
     except NotFound as e:
-        print("OPA docker container not found or not running\n")
+        print("OPA docker container not found or not running, starting... \n")
         opa_container = docker_client.containers.run("openpolicyagent/opa",
                                                      command="run --server --log-level=debug",
                                                      name="magen_opa",

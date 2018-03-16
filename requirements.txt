@@ -2,6 +2,7 @@ Flask>=0.12.2
 Flask-Login>=0.4.1
 Flask-WTF>=0.14
 Flask-UrlDiscovery>=1.1
+magen-rest-service>=1.3a6
 magen-gmail-client>=0.1a4
 magen-ingestion-service>=1.3a18
 magen-user>=0.1a2
