@@ -156,6 +156,7 @@ def main(args):
     ks_args = [[]]
     ks_process = Process(target=ks_server.main, args=ks_args)
     ks_process.start()
+    time.sleep(2)
     serverurls = ServerUrls()
     ks_check_url = serverurls.key_server_base_url + "check/"
     get_resp_obj = RestClientApis.http_get_and_check_success(ks_check_url)
