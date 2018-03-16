@@ -22,11 +22,11 @@
 
 <body style="background-color: rgb(249,250,252);">
   <div id="webwrapper">
-    <nav>
+    <nav class="sidebar">
      <a href="https://magengit.github.io/" target="_blank">
       <img class="magenlogo1 img-fluid" src="{{ url_for('static',filename='images/magentitle.png') }}" alt="magenlogo"></img>
     </a>
-    <ul>
+    <ul class="sidebarhover">
 
       <li><a class="navlink" href="/"><svg class="manageicon" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 391.43 391.43"><title>Home</title><path fill="#999" d="M368.2,349.05l138.39-129L645,349.05M368.2,349V558h91.18V455.16h94.41V558H645V349Zm235.11-92.28V178h-30V228.8l-66.72-62.19L310.87,349h38.62l157.1-146.43L663.68,349h38.63Z" transform="translate(-310.87 -166.61)"/></svg>Home</a></li>
 
@@ -44,21 +44,31 @@
 
     </ul>
   </nav>
+  </div>
   <div class="content-wrapper">
   <div class="container">
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-        <h6 class="card-header">{{ status }}!!!</h6>
-        <div class="card-body">
-        <p class="card-text">{{ message }}</p>  
+      <div class="sharetitle">
+        Magen Home Page <!--Title -->
+        </div>
+          <div class="shareinfo">
+            <!--Title Description-->
+            <p>Title Description File Upload widget with multiple file selection, drag&amp;drop support, progress bars, validation and preview images, audio and video for jQuery.<br>
+            Supports cross-domain, chunked and resumable file uploads and client-side image resizing.<br>
+            Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.</p>
+          </div>
+      <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <h6 class="card-header">{{ status }}!!!</h6>
+                <div class="card-body">
+                <p class="card-text">{{ message }}</p>
+                </div>
+            </div>
+        </div>
       </div>
-    </div>
-  </div>
 
 
   </div>
-</div>
 </div>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
