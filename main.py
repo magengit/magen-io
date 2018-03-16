@@ -11,6 +11,9 @@ import errno
 from secrets import token_hex
 
 import sys
+
+import time
+from docker.errors import NotFound
 from flask import Flask
 from flask_login import LoginManager, login_required
 from flask_url_discovery.app_registry import url_discovery
@@ -121,9 +124,10 @@ def main(args):
 
     # Starting OPA server
     docker_client = docker.from_env()
+    # if there is no image we pull it
     try:
         opa_image = docker_client.images.get("openpolicyagent/opa")
-    except docker.errors.NotFound as e:
+    except NotFound as e:
         opa_image = docker_client.images.pull("openpolicyagent/opa", tag="latest")
 
     assert opa_image is not None
@@ -131,16 +135,19 @@ def main(args):
     # if container is not running we will start it
     try:
         opa_container = docker_client.containers.get("magen_opa")
-        if opa_container.status == "exited":
+        if opa_container.status == "exited" or opa_container.status == "created":
             opa_container.remove()
-            raise docker.errors.NotFound("Container Exited")
-    except docker.errors.NotFound as e:
+            raise NotFound("Container Exited or could not be started")
+    except NotFound as e:
         print("OPA docker container not found or not running\n")
         opa_container = docker_client.containers.run("openpolicyagent/opa",
                                                      command="run --server --log-level=debug",
                                                      name="magen_opa",
                                                      ports={"8181/tcp": 8181}, detach=True)
-    assert opa_container.status == "running" or opa_container.status == "created"
+        time.sleep(5)
+
+    assert opa_container.status == "running" or (opa_container.status == "created"
+                                                 and not opa_container.attrs["State"]["Error"])
 
     # Initialize Magen Logger
     # logger = initialize_logger(output_dir=ingestion_data_dir)
