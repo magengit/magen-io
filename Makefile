@@ -13,5 +13,5 @@ check:
 install: check
 	pip3 install -r requirements.txt
 
-run: check start_mongo dependencies_run
+run: check start_mongo
 	@(python3 main.py)

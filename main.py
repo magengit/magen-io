@@ -23,16 +23,20 @@ from ingestion.ingestion_apis.gridfs_api import GridFsApi
 from ingestion.ingestion_mongo_apis.mongo_asset import MongoAsset
 from ingestion.ingestion_server.ingestion_globals import IngestionGlobals
 from ingestion.ingestion_server.ingestion_rest_api_v2 import ingestion_bp_v2
+from ks.ks_server import ks_server
 from magen_datastore_apis.main_db import MainDb
 from magen_mongo_apis.mongo_core_database import MongoCore
 from magen_mongo_apis.mongo_utils import MongoUtils
 
 import magen_user_api.user_api as user_api
+from magen_rest_apis.rest_client_apis import RestClientApis
+from magen_rest_apis.server_urls import ServerUrls
 from magen_user_api.user_api import users_bp, main_bp
 
 from ingestion.ingestion_server.ingestion_file_upload_rest_api import ingestion_file_upload_bp
 from ingestion.ingestion_server.asset_rest_api import ingestion_bp
 from magen_utils_apis.domain_resolver import mongo_host_port, inside_docker, LOCAL_MONGO_LOCATOR
+from multiprocessing import Process
 
 app = Flask(__name__)
 
@@ -149,8 +153,13 @@ def main(args):
     assert opa_container.status == "running" or (opa_container.status == "created"
                                                  and not opa_container.attrs["State"]["Error"])
 
-    # Initialize Magen Logger
-    # logger = initialize_logger(output_dir=ingestion_data_dir)
+    ks_args = [[]]
+    ks_process = Process(target=ks_server.main, args=ks_args)
+    ks_process.start()
+    serverurls = ServerUrls()
+    ks_check_url = serverurls.key_server_base_url + "check/"
+    get_resp_obj = RestClientApis.http_get_and_check_success(ks_check_url)
+    assert get_resp_obj.success is True
 
     mongo_ip, mongo_port = mongo_host_port()
 
