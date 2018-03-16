@@ -4,6 +4,7 @@ Test
 """
 import argparse
 import os
+import docker
 from pathlib import Path
 
 import errno
@@ -106,7 +107,6 @@ def main(args):
     # args = parser.parse_args()
     args, _ = parser.parse_known_args(args)
 
-
     """ Main Magen.io Sever """
     home_dir = str(Path.home())
 
@@ -118,6 +118,29 @@ def main(args):
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise
+
+    # Starting OPA server
+    docker_client = docker.from_env()
+    try:
+        opa_image = docker_client.images.get("openpolicyagent/opa")
+    except docker.errors.NotFound as e:
+        opa_image = docker_client.images.pull("openpolicyagent/opa", tag="latest")
+
+    assert opa_image is not None
+
+    # if container is not running we will start it
+    try:
+        opa_container = docker_client.containers.get("magen_opa")
+        if opa_container.status == "exited":
+            opa_container.remove()
+            raise docker.errors.NotFound("Container Exited")
+    except docker.errors.NotFound as e:
+        print("OPA docker container not found or not running\n")
+        opa_container = docker_client.containers.run("openpolicyagent/opa",
+                                                     command="run --server --log-level=debug",
+                                                     name="magen_opa",
+                                                     ports={"8181/tcp": 8181}, detach=True)
+    assert opa_container.status == "running" or opa_container.status == "created"
 
     # Initialize Magen Logger
     # logger = initialize_logger(output_dir=ingestion_data_dir)
